@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EngineeringCse_Cgpa_Calculator</title>
+    <style>
+   
+      .body{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .heading{
+
+          color:rgb(204, 28, 72);
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          text-align: center;
+          font-size: 40px;
+          height: 80px;
+      }
+      .sub_div{
+        padding-left:300px;
+      }
+      .Sub-header{
+   
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+        color:rgb(8, 206, 18);
+        height: 70px;
+      }
+      .get_inputs{
+        padding-left: 100px;
+        align:center;
+        font-size: 20px;
+        
+      }
+      .table{
+   
+        border: 2px solid black;
+        width:300px;
+        height:200px
+      }
+    </style>
+  </head>
+  <body style="background-color: aliceblue;">
+     <div class="heading">Welcome To Cgpa Calculator</div>
+         <div><div class="sub_div">
+          <div class="Sub-header">Choose Your Grades Subject-Wise:</div>
+         <div class="get_inputs">
+           <table class="table">
+           <tr>
+             <td>Calculus & Linear Algebra</td>
+             <td> 
+               <select id="Cla">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>Basic Electrical And Electronic Engineering</td>
+             <td> 
+               <select id="Beee">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>Problem Solving And Programming Through C</td>
+             <td> 
+               <select id="Pspc">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>Engineering Graphics and Computer Design</td>
+             <td> 
+               <select id="Egcd">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>English Language Communication Lab</td>
+             <td> 
+               <select id="El">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>Basic Electrical And Electronic Engineering lab</td>
+             <td> 
+               <select id="Beeel">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>         
+           <tr>
+             <td>Problem Solving And Programming Through C Lab</td>
+             <td> 
+               <select id="Pspcl">
+                    <option value="10">Ex</option>
+                    <option value="9">A</option>
+                    <option value="8">B</option>
+                    <option value="7">C</option>
+                    <option value="6">D</option>
+                    <option value="5">E</option>
+             </select></td>
+           </tr>               
+           </table>
+           <div class="submit" style="width: 60px; height: 40px;align-self: center;">
+             <button type="submit" class="submit-button" value="Submit"  onclick="result1()">Submit</button>
+           </div>
+         </div>
+         <div class="displayresult"></div>
+           <div class="note">
+             <h2>Note:</h2>
+             <p style="color: red; font-family: 'Times New Roman', Times, serif;">
+               1.It's Applicable Only To Students Who Passed In All The Subjects.<br />
+               2.Tt's Applicable Only For Cse-Students
+             </p>
+           </div>
+        
+          </div>
+         <script type="text/javascript"> 
+           function result1(){
+             let cla=document.getElementById("Cla").value*4;
+             let beee=document.getElementById("Beee").value*4;
+             let pspc=document.getElementById("Pspc").value*4;
+             let egcd=document.getElementById("Egcd").value*2.5;
+             let el=document.getElementById("El").value*2.5;
+             let beel=document.getElementById("Beeel").value*1.5;
+             let pspcl=document.getElementById("Pspcl").value*1.5;
+            let sum=cla+beee+pspc+egcd+el+beel+pspcl;
+             let g=sum/20
+             document.querySelector('.displayresult').innerText='Your Cgpa is :'+g+'. '
+           }
+           </script>
+  </body>
+</html>
